@@ -34,6 +34,7 @@
             transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
             
             /* Остальные ваши стили остаются без изменений */
+            width: 90%; /* чтобы на мобильных был отступ по бокам */
             max-width: 800px;
             backdrop-filter: blur(8px);
             background-color: rgba(255, 255, 255, 0.12);
@@ -43,6 +44,11 @@
             position: relative;
             z-index: 1;
             border: 1px solid rgba(255,255,255,0.2);
+
+            /* Защита от обрезки текста */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
         }
 
         /* Класс, который мы добавим через JS для показа */
@@ -183,9 +189,9 @@
             transform: scale(1.3);
         }
 
-        @media (max-width: 600px) {
-            h1 { font-size: 2.2em; }
-            .subtitle { font-size: 1.1em; }
+        @media (max-width: 480px) {
+            h1 {  font-size: clamp(1.5rem, 4vw, 3rem);}
+            .subtitle { font-size: clamp(1rem, 2.5vw, 1.5rem); }
             .btn-test { padding: 16px 40px; font-size: 1.1em; }
             .decoration { display: none; }
             .container { padding: 30px 20px; }
