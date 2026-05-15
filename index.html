@@ -98,6 +98,38 @@
             line-height: 1.7;
             opacity: 0.9;
         }
+        
+        .btn-nav {
+            padding: 12px 24px;
+            font-size: 1em;
+            font-family: 'Cormorant Garamond', serif;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-archive-link {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-archive-link:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+        
+        /* Подсветка секции архива при переходе по якорю */
+        .highlight-archive {
+            animation: pulse-highlight 2s ease-out;
+        }
+
+        @keyframes pulse-highlight {
+            0% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(102, 126, 234, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0); }
+        }
 
         .btn-test {
             display: inline-block;
@@ -174,7 +206,10 @@
             Узнайте, какой стиль вам ближе — сталинский ампир, классицизм, модерн или конструктивизм.
         </p>
         <a href="test.html" class="btn-test">🎯 Пройти тест</a>
-    </div>
+        <a href="result.html#archive-section" class="btn-nav btn-archive-link" style="text-decoration: none; display: inline-block;">
+    📚 Мои маршруты
+</a>
+        </div>
 
     <!-- Индикатор слайд-шоу -->
     <div class="slide-indicator">
