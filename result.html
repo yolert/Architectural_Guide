@@ -412,6 +412,15 @@
             opacity: 1;
         }
 
+        .btn-home {
+            background: #2d3436; /* тёмно-серый */
+            color: white;
+        }
+        .btn-home:hover {
+            background: #000000;
+            transform: translateY(-2px);
+        }
+
         @media (max-width: 768px) {
             .result-content { grid-template-columns: 1fr; }
             .map-placeholder { height: 300px; }
@@ -455,8 +464,13 @@
                     🔗 Поделиться
                 </button>
                 <button class="btn-action btn-restart" onclick="restartTest()">
-                    🔄 Пройти заново
+                    🔄 Пройти тест заново
                 </button>
+                <a href="index.html" style="text-decoration: none;">
+                    <button class="btn-action btn-home">
+                        🏠 На главную
+                    </button>
+                </a>
             </div>
 
             <!-- Модальное окно можно оставить для других целей, но карту из него мы убрали, 
